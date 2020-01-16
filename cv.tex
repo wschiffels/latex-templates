@@ -1,0 +1,149 @@
+\documentclass{scrartcl}
+\reversemarginpar
+\newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{german}
+\usepackage[LabelsAligned]{currvita}
+\usepackage[nochapters]{classicthesis}
+\usepackage{url}
+\renewcommand{\cvheadingfont}{\LARGE\color{Linkcolor}}
+\renewcommand{\cvlistheadingfont}{\large}
+\renewcommand{\cvlabelfont}{\qquad}
+\usepackage{wasysym}
+\usepackage{hyperref}
+\hypersetup{colorlinks,breaklinks,
+					  urlcolor=Linkcolor,
+						linkcolor=Linkcolor}
+\usepackage{eurosym}
+\newlength{\datebox}\settowidth{\datebox}{\today}
+\definecolor{Linkcolor}{HTML}{4C7E8D}
+\newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{0.5em} {\color{Linkcolor} \small \spacedlowsmallcaps{#2}} #3%
+\vspace{0.5em}}
+\newcommand{\ProfileLink}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{0.5em} {\small{#2}} #3%
+\vspace{0.5em}}
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize}
+\newcommand{\Sep}{\vspace{2em}}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{cv}{\spacedallcaps{John Doe}}
+\vspace{1.5em}
+
+%%---------------------------------------------------------------%%
+%%   Personal                                                    %%
+%%---------------------------------------------------------------%%
+
+\noindent\spacedlowsmallcaps{Personal}
+\vspace{0.5em}
+
+\ProfileLink{Address}{street, postcode, city}{}
+
+\NewWorkExperience{Telephone}{(+49) 123 456 789}{}
+
+\ProfileLink{Email}{\href{mailto:fist.last@example.com}{first.last@example.com}}{}
+
+\ProfileLink{github}{\href{https://github.com/profile}{github.com/profile}}{}
+
+\ProfileLink{Xing}{\href{http://xing.com/profile/profile/cv}{xing.com/profile/profile}}{}
+
+\ProfileLink{Linkedin}{\href{https://linkedin.com/in/profile}{linkedin.com/in/profile}}{}
+
+
+\vspace{2em}
+
+%%---------------------------------------------------------------%%
+%%   Berufserfahrung                                            %%
+%%---------------------------------------------------------------%%
+
+\noindent\spacedlowsmallcaps{Rrofessional Experience}
+\vspace{1em}
+
+%%---------------------------------------------------------------%%
+%%   Company 1                                                   %%
+%%---------------------------------------------------------------%%
+\NewWorkExperience{\color{Linkcolor}since 01.01}{a jobtitle}{}
+
+\Description{\MarginDate{\color{Linkcolor}Company 1}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend
+fringilla sapien. Nullam lobortis, massa suscipit consectetur venenatis, massa
+eros mattis sem, eu tincidunt augue odio eget ipsum. Proin in pharetra nisi. Nam
+ac dictum lacus, nec pellentesque sem.
+    \begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
+      \item[-] thing
+      \item[-] another thing
+    \end{itemize}
+}
+\vspace{1em}
+
+%%---------------------------------------------------------------%%
+%%   Company 2                                                   %%
+%%---------------------------------------------------------------%%
+
+\NewWorkExperience{\color{Linkcolor}01.70 - 02.70}{another jobtitle}{}
+
+\Description{\MarginDate{\color{Linkcolor}Company 2}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend
+fringilla sapien. Nullam lobortis, massa suscipit consectetur venenatis, massa
+eros mattis sem, eu tincidunt augue odio eget ipsum. Proin in pharetra nisi. Nam
+ac dictum lacus, nec pellentesque sem.
+\begin{itemize}\itemsep1pt \parskip0pt
+\parsep0pt
+      \item[-] thing
+      \item[-] another thing
+    \end{itemize}
+}
+\vspace{1em}
+
+%%---------------------------------------------------------------%%
+%%   Education                                                   %%
+%%---------------------------------------------------------------%%
+
+\spacedlowsmallcaps{Education}
+\vspace{1em}
+
+%%---------------------------------------------------------------%%
+%%   School / university                                         %%
+%%---------------------------------------------------------------%%
+
+\NewWorkExperience{\color{Linkcolor}2000 - 2001}{Education}{}
+
+\Description{\MarginDate{\color{Linkcolor}School or University}something I learned}
+\vspace{1em}
+
+%%---------------------------------------------------------------%%
+%%   Skills                                                      %%
+%%---------------------------------------------------------------%%
+\vspace{2em}
+\spacedlowsmallcaps{Professional Skills}
+\vspace{1em}
+
+\Description{thing, another thing, yet another thing}
+\MarginDate{\color{Linkcolor}Thing 1}
+
+\vspace{2em}
+\Description{another thing}
+\MarginDate{\color{Linkcolor}Thing 2}
+
+\vspace{2em}
+\Description{something completely different}
+\MarginDate{\color{Linkcolor}Thing 3}
+
+
+%%---------------------------------------------------------------%%
+%%   Other                                                       %%
+%%---------------------------------------------------------------%%
+\vspace{2em}
+\spacedlowsmallcaps{Other}
+\vspace{1em}
+
+\Description{German, Englisch}
+\MarginDate{\color{Linkcolor}Languages}
+
+\vspace{2em}
+\Description{interest 1, interest 2}
+\MarginDate{\color{Linkcolor}Interests}
+
+\enlargethispage{\baselineskip}
+\end{cv}
+\end{document}
